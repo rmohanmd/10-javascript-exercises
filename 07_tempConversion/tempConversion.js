@@ -1,13 +1,13 @@
-const ftoc = function() {
-
+const ctof = function (celcius) {
+  return (fahrenheit = Math.round(((celcius * 9) / 5 + 32) * 10) / 10);
 };
 
-const ctof = function() {
-
+const ftoc = function (fahrenheit) {
+  return (celcius = Math.round((((fahrenheit - 32) * 5) / 9) * 10) / 10);
 };
 
 // Do not edit below this line
 module.exports = {
   ftoc,
-  ctof
+  ctof,
 };

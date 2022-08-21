@@ -7,5 +7,7 @@ const reverseString = function (phrase) {
   return reversePhrase;
 };
 
+// there is a .reverse and .join function thus could use return string.split('').reverse().join('');
+
 // Do not edit below this line
 module.exports = reverseString;

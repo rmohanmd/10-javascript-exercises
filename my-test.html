@@ -37,9 +37,99 @@
             }
           }
         }
-        console.log(submitArray);
       };
-      //console.log(removeFromArray([1, 2, 3, 4], 3));
+
+      const sumAll = function (startNum, endNum) {
+        let total = 0;
+
+        if (
+          startNum < 0 ||
+          endNum < 0 ||
+          typeof startNum !== "number" ||
+          typeof endNum !== "number"
+        ) {
+          return "ERROR";
+        }
+
+        if (startNum > endNum) {
+          let temp = endNum;
+          endNum = startNum;
+          startNum = temp;
+        }
+
+        for (i = lowNum; i < highNum + 1; i++) {
+          total = total + i;
+        }
+        return total;
+      };
+
+      const sum = function (givenArray) {
+        let total = 0;
+        if (givenArray.length === 0) {
+          return 0;
+        } else {
+          for (i = 0; i < givenArray.length; i++) {
+            total = total + givenArray[i];
+          }
+        }
+        return total;
+      };
+
+      const power = function (givenArray) {
+        console.log(givenArray);
+      };
+
+      const factorial = function (num) {
+        total = 1;
+        for (i = 1; i <= num; i++) {
+          total = total * i;
+        }
+        return total;
+      };
+
+      const palindromes = function (phrase) {
+        let lettersArray = phrase.toLowerCase().split("");
+        let modifiedArray = [];
+        let modArrayCounter = 0;
+        for (i = 0; i < lettersArray.length; i++) {
+          if (
+            lettersArray[i] === " " ||
+            lettersArray[i] === "," ||
+            lettersArray[i] === "'" ||
+            lettersArray[i] === "." ||
+            lettersArray[i] === "!"
+          ) {
+          } else {
+            modifiedArray[modArrayCounter] = lettersArray[i];
+            modArrayCounter++;
+          }
+        }
+        let arrayLength = modifiedArray.length;
+        for (y = 0; y < Math.floor(arrayLength / 2); y++) {
+          if (modifiedArray[y] !== modifiedArray[arrayLength - y - 1])
+            return false;
+        }
+        return true;
+      };
+
+      const fibonacci = function (num) {
+        let a = 1;
+        let b = 0;
+        let temp = 0;
+
+        if (num === 1 || num === 2) {
+          return 1;
+        } else {
+          for (i = 0; i < num; i++) {
+            temp = a + b;
+            a = b;
+            b = temp;
+          }
+        }
+        return temp;
+      };
+
+      const getTheTitles = function (books) {};
     </script>
   </body>
 </html>

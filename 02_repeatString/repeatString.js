@@ -7,7 +7,7 @@ const repeatString = function (string, num) {
     }
     return concatString;
   }
-  return (concatString = "ERROR");
+  return "ERROR";
 };
 
 // Do not edit below this line
