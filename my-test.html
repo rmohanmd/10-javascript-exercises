@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>My Test Html File</title>
+  </head>
+  <body>
+    <script>
+      const repeatString = function (string, num) {
+        let concatString = "";
+        for (i = 0; i < num; i++) {
+          concatString += string;
+        }
+        return concatString;
+      };
+
+      const reverseString = function (phrase) {
+        let reversePhrase = "";
+        let splitPhrase = phrase.split("");
+        for (i = 0; i < splitPhrase.length; i++) {
+          reversePhrase += splitPhrase[splitPhrase.length - (i + 1)];
+        }
+        return reversePhrase;
+      };
+
+      const removeFromArray = function () {
+        let submitArray = arguments[0];
+        let arrayLength = submitArray.length;
+        let numOfWordsRemove = arguments.length;
+        //items to be removed are 1 less than the length of the array.
+
+        for (i = 1; i < numOfWordsRemove; i++) {
+          let removalWord = arguments[i];
+          for (y = 0; y < arrayLength; y++) {
+            if (removalWord === submitArray[y]) {
+              submitArray.splice(y, 1);
+            }
+          }
+        }
+        console.log(submitArray);
+      };
+      //console.log(removeFromArray([1, 2, 3, 4], 3));
+    </script>
+  </body>
+</html>
