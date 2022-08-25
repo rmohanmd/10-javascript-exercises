@@ -1,4 +1,4 @@
-const removeFromArra = function () {
+const removeFromArray = function () {
   let submitArray = arguments[0];
   let arrayLength = submitArray.length;
   let numOfWordsRemove = arguments.length;
@@ -15,7 +15,13 @@ const removeFromArra = function () {
   return submitArray;
 };
 
-const removeFromArray = function (...args) {
+//My solution using arguments[n] is not ES6 compatible. Also, arguments[n] is 'array-like' but not an array
+//you can use length property and get it's contents. But you can't use array built in methods like forEach
+//or arrow functions
+
+//...args is rest parameters
+
+const removeFromArraySample = function (...args) {
   // the very first item in our list of arguments is the array, we pull it out with args[0]
   const array = args[0];
   // create a new empty array
