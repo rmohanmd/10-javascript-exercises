@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      const peoples = [
+        {
+          name: "Carly",
+          yearOfBirth: 2018,
+        },
+        {
+          name: "Ray",
+          yearOfBirth: 1962,
+          yearOfDeath: 2011,
+        },
+        {
+          name: "Jane",
+          yearOfBirth: 1912,
+          yearOfDeath: 1941,
+        },
+      ];
+
+      function abc(people) {
+        return people.sort((a, b) => {
+          if (!("yearOfDeath" in a)) a.yearOfDeath = new Date().getFullYear();
+          if (!("yearOfDeath" in b)) b.yearOfDeath = new Date().getFullYear();
+          const prevGuy = a.yearOfDeath - a.yearOfBirth;
+          const nextGuy = b.yearOfDeath - b.yearOfBirth;
+
+          return prevGuy > nextGuy ? -1 : 1;
+        });
+      }
+    </script>
+  </body>
+</html>
